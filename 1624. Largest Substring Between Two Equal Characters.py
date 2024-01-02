@@ -3,7 +3,7 @@ import unittest
 
 
 class Solution:
-    def maxLengthBetweenEqualCharacters(slef, s: str) -> int:
+    def maxLengthBetweenEqualCharacters(self, s: str) -> int:
         dp = {}
         for i, ch in enumerate(s):
             if ch in dp:
@@ -16,6 +16,7 @@ class Solution:
                 max_s = max(max_s, dp[key][-1] - dp[key][0] - 1)
         return max_s
 
+
 class Testcases(unittest.TestCase):
     def setUp(self):
         self.sol = Solution()
@@ -27,7 +28,8 @@ class Testcases(unittest.TestCase):
         self.assertEqual(2, self.sol.maxLengthBetweenEqualCharacters(s="abca"))
 
     def testcase3(self):
-        self.assertEqual(-1, self.sol.maxLengthBetweenEqualCharacters(s="cbzxy"))
+        self.assertEqual(-1,
+                         self.sol.maxLengthBetweenEqualCharacters(s="cbzxy"))
 
 
 if __name__ == "__main__":

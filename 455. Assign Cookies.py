@@ -4,7 +4,7 @@ from typing import List
 
 
 class Solution:
-    def findContentChildren(slef, g: List[int], s: List[int]) -> int:
+    def findContentChildren(self, g: List[int], s: List[int]) -> int:
         if len(s) == 0 or len(g) == 0:
             return 0
         g.sort()
