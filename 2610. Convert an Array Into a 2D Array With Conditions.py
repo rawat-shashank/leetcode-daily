@@ -7,10 +7,7 @@ class Solution:
     def findMatrix(self, nums: List[int]) -> List[List[int]]:
         dp = {}
         for num in nums:
-            if num in dp:
-                dp[num] += 1
-            else:
-                dp[num] = 1
+            dp[num] = dp.get(num, 0) + 1
         ans = []
         for key in dp.keys():
             i = 0
