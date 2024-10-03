@@ -1,4 +1,3 @@
-# 1235. Maximum Profit in Job Scheduling
 import unittest
 from typing import List
 
