@@ -34,8 +34,7 @@ class Testcases(unittest.TestCase):
 
     def testcase2(self):
         a = {(frozenset(item)) for item in [[4, 3, 2, 1]]}
-        b = {(frozenset(item))
-             for item in self.sol.findMatrix(nums=[1, 2, 3, 4])}
+        b = {(frozenset(item)) for item in self.sol.findMatrix(nums=[1, 2, 3, 4])}
 
         self.assertEqual(a, b)
 

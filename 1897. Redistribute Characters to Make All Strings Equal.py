@@ -17,7 +17,7 @@ class Solution:
         for num in char_map:
             if num % words_len != 0:
                 return False
-        return True
+      return True
 
 
 class Testcases(unittest.TestCase):
