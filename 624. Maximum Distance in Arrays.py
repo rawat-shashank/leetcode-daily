@@ -26,8 +26,7 @@ class Testcases(unittest.TestCase):
         self.assertEqual(0, self.sol.maxDistance(arrays=[[1], [1]]))
 
     def testcase3(self):
-        self.assertEqual(4, self.sol.maxDistance(arrays=[[1,4],[0,5]]))
-        
+        self.assertEqual(4, self.sol.maxDistance(arrays=[[1, 4], [0, 5]]))
 
 
 if __name__ == "__main__":
