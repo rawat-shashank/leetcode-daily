@@ -12,7 +12,7 @@ class Solution:
                     return False
             return True
 
-        primes = [0, 0, 2]
+        primes = [0, 0]
         for i in range(2, max(nums)):
             if is_prime(i):
                 primes.append(i)
@@ -22,7 +22,9 @@ class Solution:
         prev = 0
         for n in nums:
             upper_bound = n - prev
+            print(upper_bound)
             largest_prime = primes[upper_bound - 1]
+            print(largest_prime, n - largest_prime)
             if n - largest_prime <= prev:
                 return False
             prev = n - largest_prime
@@ -46,6 +48,11 @@ class Testcases(unittest.TestCase):
     def testcase3(self):
         self.assertFalse(
             self.sol.primeSubOperation(nums=[5, 8, 3]),
+        )
+
+    def testcase4(self):
+        self.assertTrue(
+            self.sol.primeSubOperation(nums=[998, 2]),
         )
 
 
