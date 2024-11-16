@@ -1,6 +1,5 @@
 from typing import List
 import unittest
-import math
 
 
 class Solution:
@@ -42,7 +41,7 @@ class Testcases(unittest.TestCase):
             self.sol.findLengthOfShortestSubarray(arr=[1, 2, 3]),
         )
 
-    def testcase3(self):
+    def testcase4(self):
         self.assertEqual(
             8,
             self.sol.findLengthOfShortestSubarray(
