@@ -1,27 +1,40 @@
 import unittest
-# from collections import Counter
+from collections import Counter
+
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        # if len(s) != len(t): return False
+        # if len(s) != len(t):
+        #     return False
         # return Counter(s) == Counter(t)
-        if len(s) != len(t): return False
-        dp = {}
+        # if len(s) != len(t):
+        #     return False
+        # dp = {}
+        # for x in s:
+        #     if x in dp:
+        #         dp[x] += 1
+        #     else:
+        #         dp[x] = 1
+        # for y in t:
+        #     if y in dp:
+        #         if dp[y] > 1:
+        #             dp[y] -= 1
+        #         else:
+        #             del dp[y]
+        #     else:
+        #         return False
+        # if len(dp.keys()) == 0:
+        #     return True
+        # return False
+        if len(s) != len(t):
+            return False
+        dp1 = {}
+        dp2 = {}
         for x in s:
-            if x in dp:
-                dp[x]+=1
-            else:
-                dp[x] = 1
-        for y in t:
-            if y in dp:
-                if dp[y] > 1:
-                    dp[y] -= 1
-                else:
-                    del dp[y]
-            else:
-                return False
-        if len(dp.keys()) == 0: return True
-        return False
+            dp1[x] = dp1.get(x, 0) + 1
+        for x in t:
+            dp2[x] = dp2.get(x, 0) + 1
+        return dp1 == dp2
 
 
 class Testcases(unittest.TestCase):

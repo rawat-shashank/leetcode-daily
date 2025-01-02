@@ -4,14 +4,18 @@ from typing import List
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        if nums == 0: return False
-        dp = {}
-        for num in nums:
-            if num in dp:
-                return True
-            else:
-                dp[num] = 1
-        return False
+        # if nums == 0:
+        #     return False
+        # dp = {}
+        # for num in nums:
+        #     if num in dp:
+        #         return True
+        #     else:
+        #         dp[num] = 1
+        # return False
+
+        dp = set()
+        return any(num in dp or dp.add(num) for num in nums)
 
 
 class Testcases(unittest.TestCase):
