@@ -3,7 +3,6 @@ import unittest
 
 class Solution:
     def punishmentNumber(self, n: int) -> int:
-        """brute force"""
 
         def can_partition(num, target):
             # Invalid partition found
