@@ -60,7 +60,7 @@ def binaryTreeToList(root: Optional[TreeNode]) -> List:
     return result
 
 
-def identicalTrees(a, b):
+def identicalTrees(a:TreeNode, b:TreeNode) -> bool:
     # 1. Both empty
     if a is None and b is None:
         return True
