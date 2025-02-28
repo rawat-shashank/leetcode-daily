@@ -11,10 +11,9 @@ class Solution:
             if not node:
                 return 0
 
-            leftMax = max(0, dfs(node=node.left))
-            rightMax = max(0, dfs(node=node.right))
-            
-            res = max(
+            leftMax: int = max(0, dfs(node=node.left))
+            rightMax: int= max(0, dfs(node=node.right))
+            res: int = max(
                 res,
                 node.val + leftMax + rightMax
             )
@@ -22,7 +21,7 @@ class Solution:
             return node.val + max(leftMax, rightMax)
 
 
-        dfs(node=root)
+        _ = dfs(node=root)
         return res
 
 

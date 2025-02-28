@@ -39,10 +39,12 @@ def listToBinaryTree(items: list[int | None]) -> TreeNode | None:
 
     def inner(index: int = 0) -> TreeNode | None:
         """Closure function using recursion bo build tree"""
-        val = items[index]
-        if n <= index or val is None:
+        if n <= index or items[index] is None:
             return None
 
+        val = items[index]
+        if val is None:
+            return None
         node = TreeNode(val)
         node.left = inner(2 * index + 1)
         node.right = inner(2 * index + 2)
