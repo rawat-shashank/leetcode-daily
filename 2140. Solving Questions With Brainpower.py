@@ -31,12 +31,12 @@ class Solution:
         cache = [0] * (N + 1)
         for idx in range(N - 1, -1, -1):
             points, brainpower = questions[idx]
+            next_idx = idx + 1 + brainpower
             cache[idx] = max(
                 # skip current question
                 cache[idx + 1],
                 # choose current question
-                points
-                + (cache[idx + 1 + brainpower] if idx + 1 + brainpower < N else 0),
+                points + (cache[next_idx] if next_idx < N else 0),
             )
         return cache[0]
 
